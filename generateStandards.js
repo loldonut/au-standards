@@ -33,6 +33,6 @@ standardIDs.forEach(async (id, i) => {
         .replaceAll('\n', '\n\n')
         .replace(rawTitle, `# ${title}`);
 
-    writeFileSync(`./standards/${i+1}.md`, '###### This file is auto generated!\n\n' + filteredContent);
+    writeFileSync(`./standards/${i+1}.md`, '##### This file is auto generated!\n\n' + filteredContent);
     console.log(`${i+1}, ${title}: Done`);
 });
