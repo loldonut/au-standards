@@ -25,6 +25,6 @@ standardIDs.forEach(async (id, i) => {
         headers,
     })).data.content;
 
-    writeFileSync(`./standards/${i+1}.md`, 'This file is auto generated!\n' + content);
+    writeFileSync(`./standards/${i+1}.md`, 'This file is auto generated!\n\n' + content);
     console.log(`${i+1}: Done`);
 });
