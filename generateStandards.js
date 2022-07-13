@@ -21,10 +21,11 @@ const headers = {
 };
 
 standardIDs.forEach(async (id, i) => {
-    const content = (await axios.get(`${url}/${id}`, {
+    const rawContent = (await axios.get(`${url}/${id}`, {
         headers,
     })).data.content;
+    const filteredContent = rawContent.replaceAll('\n', '\n\n');
 
-    writeFileSync(`./standards/${i+1}.md`, 'This file is auto generated!\n\n' + content);
+    writeFileSync(`./standards/${i+1}.md`, 'This file is auto generated!\n\n' + filteredContent);
     console.log(`${i+1}: Done`);
 });
