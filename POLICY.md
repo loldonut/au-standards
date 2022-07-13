@@ -39,5 +39,5 @@ Replace `[]` with the corresponding information, including `[]`.
 - `[Description]` - the FULL Description of the Standard.
 
 ### IMPORTANT Note
-It must exactly follow this format if you're submitting a standard.
+It must exactly follow the format/template if you're submitting a standard.
 Otherwise it would not be reviewed, unless updated to follow the format.
