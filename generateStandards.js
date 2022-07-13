@@ -24,8 +24,15 @@ standardIDs.forEach(async (id, i) => {
     const rawContent = (await axios.get(`${url}/${id}`, {
         headers,
     })).data.content;
-    const filteredContent = rawContent.replaceAll('\n', '\n\n');
+
+    const titleRegex = /\*\*Standard \d\. .*\*\*/g;
+    const rawTitle = rawContent.match(titleRegex)[0];
+    const title = rawTitle.replaceAll('*', '');
+
+    const filteredContent = rawContent
+        .replaceAll('\n', '\n\n')
+        .replace(rawTitle, `# ${title}`);
 
     writeFileSync(`./standards/${i+1}.md`, 'This file is auto generated!\n\n' + filteredContent);
-    console.log(`${i+1}: Done`);
+    console.log(`${i+1}, ${title}: Done`);
 });
