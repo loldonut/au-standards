@@ -37,3 +37,7 @@ Replace `[]` with the corresponding information, including `[]`.
 - `[Standard ID]` - A Standard ID is basically a number after the previous standard. (Starting from `1.`)
 - `[Standard Name]` - The Name of the Standard.
 - `[Description]` - the FULL Description of the Standard.
+
+### IMPORTANT Note
+It must exactly follow this format if you're submitting a standard.
+Otherwise it would not be reviewed, unless updated to follow the format.
